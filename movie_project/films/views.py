@@ -16,7 +16,7 @@ def add_comment(request):
 
 def comments_list(request):
     films = Comment.objects.all()
-    return render(request, 'films/comments_list.html', {'comment': comment})
+    return render(request, 'films/comments_list.html', {'comments': comments_list})
 
 
 from django.shortcuts import render
