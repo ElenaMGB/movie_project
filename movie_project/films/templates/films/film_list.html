@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список комментариев</title>
+    <title>Список фильмов</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="text-center mb-4">Список комментариев</h1>
+        <h1 class="text-center mb-4">Список фильмов</h1>
         <ul class="list-group">
-            {% for comment in comments %}
-                <li class="list-group-item">
-                    <h5>{{ comment.film.title }}</h5>
-                    <p>{{ comment.description }}</p>
-                    <p><strong>{{ comment.author }}:</strong> {{ comment.comment }}</p>
-                </li>
+            {% for film in films %}
+                <li class="list-group-item">{{ film.title }} ({{ film.year }})</li>
             {% endfor %}
         </ul>
     </div>
