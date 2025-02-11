@@ -21,8 +21,8 @@ def add_comment(request):
             return redirect('comments_list')
         else:
             error = "Данные были заполнены некорректно"
-    form = CommentForm()
-    return render(request, 'films/add_comment.html', {'form': form}, {'errors': error})
+            form = CommentForm()
+    return render(request, 'films/comments_list', {'form': form}, {'errors': error})
 
 def film_list(request):
     films = Film.objects.all()

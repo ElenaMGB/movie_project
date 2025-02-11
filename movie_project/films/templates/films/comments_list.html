@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список комментариев</title>
+    <title>Добавить комментарий</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="text-center mb-4">Список комментариев</h1>
-        <ul class="list-group">
-            {% for comment in comments %}
-                <li class="list-group-item">
-                    <h5>{{ comment.film.title }}</h5>
-                    <p>{{ comment.description }}</p>
-                    <p><strong>{{ comment.author }}:</strong> {{ comment.comment }}</p>
-                </li>
-            {% endfor %}
-        </ul>
+        <h1 class="text-center mb-4">Добавить комментарий</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
