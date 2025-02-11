@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Comment
+from .models import Film, Comment
 
+admin.site.register(Film)
 admin.site.register(Comment)
-from django.contrib import admin
-
-# Register your models here.
