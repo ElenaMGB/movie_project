@@ -20,7 +20,7 @@ class Comment(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Comment by {self.author} on {self.description}'
+        return f'Comment by {self.author} on {self.film.title}'
 
     class Meta:
         verbose_name = 'Отзыв'
