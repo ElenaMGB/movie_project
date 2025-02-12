@@ -11,10 +11,8 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['film', 'comment', 'author']
-        # fields = ['film', 'description', 'comment', 'author']
         widgets = {
             'film': forms.Select(attrs={'class': 'form-control'}),
-            # 'description': TextInput(attrs={'class': 'form-control', 'placeholder': 'Краткое описание фильма'}),
             'comment': Textarea(attrs={'class': 'form-control', 'placeholder': 'Ваш отзыв'}),
             'author': TextInput(attrs={'class': 'form-control', 'placeholder': 'Автор отзыва'})
         }

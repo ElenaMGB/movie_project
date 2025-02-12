@@ -6,7 +6,7 @@ class Film(models.Model):
     review = models.TextField('Краткое описание фильма', max_length=200)
 
     def __str__(self):
-        return f'{self.title} ({self.review})'
+        return f'{self.title} '
 
 class Comment(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE)
